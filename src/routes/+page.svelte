@@ -22,7 +22,6 @@
 			return 'Other';
 		}
 	}
-
 	// Add these THREE derived totals to your <script> block,
 	// below the classify() function.
 	let totalRevenue = $derived(
