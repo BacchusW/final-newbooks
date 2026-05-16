@@ -1,6 +1,7 @@
 <script>
-	// 1. Fetch data from the server
-	let { data } = $props();
+  let { data } = $props(); // Assuming data.transactions comes from your load function
+  
+	// (filtering UI removed) 
 
 	// This holds the raw array from your server/database
 	let transactions = $derived(data.transactions || []);
