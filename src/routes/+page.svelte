@@ -26,13 +26,15 @@
 	// below the classify() function.
 	let totalRevenue = $derived(
 		(transactions || [])
-			.filter((t) => t.type === 'revenue' || t.category === 'revenue')
+			.filter((t) => t.type === 'Revenue' || t.credit === 'Revenue')
 			.reduce((sum, t) => sum + Number(t.amount || 0), 0)
 	);
 
 	let totalExpenses = $derived(
 		(transactions || [])
-			.filter((t) => t.type === 'expense' || t.category === 'expense')
+			.filter(
+				(t) => t.type === 'Expense' || t.debit === 'Rent Expense' || t.credit === 'Rent Expense'
+			)
 			.reduce((sum, t) => sum + Number(t.amount || 0), 0)
 	);
 
